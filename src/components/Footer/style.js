@@ -57,7 +57,33 @@ export const PersonalLinks = styled.section`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
+
+  ${media.lessThan('md')`
+    min-width: 420px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  `};
+
+  ${media.lessThan('sm')`
+    min-width: unset;
+    flex-direction: column;
+  `};
+`
+
+export const LinkColumn = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  ${media.lessThan('md')`
+    flex-direction: column;
+    align-items: flex-start;
+  `};
+
+  ${media.lessThan('sm')`
+    margin-bottom: 15px;
+  `};
 `
 
 export const LinkHeading = styled.h6`
@@ -66,10 +92,14 @@ export const LinkHeading = styled.h6`
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  margin-right: 15px;
+  margin: 0 15px 0 0;
+
+  ${media.lessThan('md')`
+    margin-bottom: 10px;
+  `};
 `
 
-export const SocialMedia = styled.div`
+export const SocialMediaLinks = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -83,15 +113,10 @@ export const SocialMediaLink = styled.a`
   background-color: ${props => props.theme.lightestColor};
 `
 
-export const EmailMe = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`
-
 export const EmailLink = styled.a`
   color: ${props => props.theme.primaryColor};
   font-family: ${props => props.theme.bodyFont};
   font-weight: 500;
   font-size: 14px;
+  text-decoration: none;
 `

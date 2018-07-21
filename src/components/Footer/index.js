@@ -6,11 +6,11 @@ import {
   BottomNav,
   NavLink,
   PersonalLinks,
-  SocialMedia,
   LinkHeading,
   SocialMediaLink,
-  EmailMe,
-  EmailLink
+  EmailLink,
+  LinkColumn,
+  SocialMediaLinks
 } from './style'
 
 export default () => (
@@ -24,22 +24,29 @@ export default () => (
       <NavLink to="/mixtapes">Mixtapes</NavLink>
     </BottomNav>
     <PersonalLinks>
-      <SocialMedia>
+      <LinkColumn>
         <LinkHeading>Be my friend</LinkHeading>
-        <SocialMediaLink
-          target="_blank"
-          href="https://www.facebook.com/shelby.lisieski"
-        />
-        <SocialMediaLink
-          target="_blank"
-          href="https://www.instagram.com/shelbysagelisieski/"
-        />
-        <SocialMediaLink target="_blank" href="https://twitter.com/slisieski" />
-      </SocialMedia>
-      <EmailMe>
+        <SocialMediaLinks>
+          <SocialMediaLink
+            target="_blank"
+            href="https://www.facebook.com/shelby.lisieski"
+          />
+          <SocialMediaLink
+            target="_blank"
+            href="https://www.instagram.com/shelbysagelisieski/"
+          />
+          <SocialMediaLink
+            target="_blank"
+            href="https://twitter.com/slisieski"
+          />
+        </SocialMediaLinks>
+      </LinkColumn>
+      <LinkColumn>
         <LinkHeading>Email me</LinkHeading>
-        <EmailLink>shelbylisieski@gmail.com</EmailLink>
-      </EmailMe>
+        <EmailLink href="mailto:shelbylisieski@gmail.com">
+          shelbylisieski@gmail.com
+        </EmailLink>
+      </LinkColumn>
     </PersonalLinks>
   </Wrapper>
 )
