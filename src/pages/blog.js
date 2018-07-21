@@ -17,7 +17,7 @@ import {
 const BlogPage = () => (
   <Layout>
     <Container>
-      <Masonry disableImagesLoaded={true}>
+      <Masonry disableImagesLoaded={true} options={{ transitionDuration: 0 }}>
         <TitleWrapper>
           <Title>Blog</Title>
           <SubTitle>
