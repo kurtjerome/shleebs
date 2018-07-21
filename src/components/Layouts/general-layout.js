@@ -2,9 +2,10 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 
-import Header from '../Header'
 import { Wrapper } from './general-layout.style'
 import themes from '../../themes'
+import Header from '../Header'
+import Footer from '../Footer'
 
 export default ({ children }) => (
   <Wrapper>
@@ -22,6 +23,7 @@ export default ({ children }) => (
       <>
         <Header />
         {children}
+        <Footer />
       </>
     </ThemeProvider>
   </Wrapper>
