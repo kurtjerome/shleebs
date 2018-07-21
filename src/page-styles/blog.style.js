@@ -114,10 +114,12 @@ export const PostPreview = styled.article`
   ${media.lessThan('md')`
     &:nth-of-type(2n + 1) {
       padding-left: 20%;
+      padding-right: 15px;
     }
 
     &:nth-of-type(2n + 2) {
       padding-right: 20%;
+      padding-left: 15px;
     }
   `};
 
