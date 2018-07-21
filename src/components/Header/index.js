@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import {
   Wrapper,
   NavWrapper,
@@ -12,12 +13,12 @@ import {
 
 const headerLogo = require('../../assets/images/header-logo.png')
 
-export default () => (
+const Header = ({ site }) => (
   <Wrapper>
     <BrandLink to="/">
       <Logo src={headerLogo} alt="The Sage of Discovery Logo" />
       <TitleWrapper>
-        <Title>The Sage of Discovery</Title>
+        <Title>{site.siteMetadata.title}</Title>
         <SubTitle>This is Life. Life is This.</SubTitle>
       </TitleWrapper>
     </BrandLink>
@@ -36,4 +37,19 @@ export default () => (
       </NavLink>
     </NavWrapper>
   </Wrapper>
+)
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery2 {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={Header}
+  />
 )

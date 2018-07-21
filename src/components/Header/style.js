@@ -8,6 +8,14 @@ export const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid ${props => props.theme.lightestColor};
+
+  ${media.lessThan('md')`
+    flex-direction: column;
+  `};
+
+  ${media.lessThan('sm')`
+    flex-direction: row;
+  `};
 `
 
 export const BrandLink = styled(Link)`
@@ -16,6 +24,10 @@ export const BrandLink = styled(Link)`
   align-items: center;
   margin: 15px;
   text-decoration: none;
+
+  ${media.lessThan('md')`
+    margin: 10px;
+  `};
 `
 
 export const Logo = styled.img`
@@ -36,6 +48,10 @@ export const Title = styled.strong`
   font-family: ${props => props.theme.headerFont};
   font-weight: 700;
   font-size: 20px;
+
+  ${media.lessThan('md')`
+    font-size: 16px;
+  `};
 `
 
 export const SubTitle = styled.span`
@@ -43,6 +59,10 @@ export const SubTitle = styled.span`
   font-family: ${props => props.theme.bodyFont};
   font-weight: 300;
   font-size: 13px;
+
+  ${media.lessThan('md')`
+    font-size: 11px;
+  `};
 `
 
 export const NavWrapper = styled.nav`
@@ -58,6 +78,7 @@ export const NavWrapper = styled.nav`
 export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
+  justify-content: center;
   flex: 1;
   text-transform: uppercase;
   text-decoration: none;
@@ -68,6 +89,7 @@ export const NavLink = styled(Link)`
   font-family: ${props => props.theme.bodyFont};
   font-weight: 400;
   font-size: 12px;
+  letter-spacing: 0.1em;
 
   &:hover {
     color: ${props => props.theme.primaryColor};
@@ -86,4 +108,12 @@ export const NavLink = styled(Link)`
       border-radius: 2px;
     }
   }
+
+  ${media.lessThan('lg')`
+    margin: 0 10px;
+  `};
+
+  ${media.lessThan('md')`
+    padding: 10px 0;
+  `};
 `

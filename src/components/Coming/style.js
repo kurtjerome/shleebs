@@ -12,13 +12,13 @@ export const WorkInProgress = styled.h1`
   color: ${props => props.theme.primaryColor};
   font-family: ${props => props.theme.headerFont};
   font-weight: 700;
-  font-size: 72px;
+  font-size: 64px;
   margin: 0;
   text-align: center;
 `
 
 export const Description = styled.p`
-  color: ${props => props.theme.bodyColor};
+  color: ${props => props.theme.lightColor};
   font-family: ${props => props.theme.bodyFont};
   font-weight: 300;
   font-size: 18px;
