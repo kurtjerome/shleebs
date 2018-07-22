@@ -41,6 +41,12 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   margin: 0 20px;
   padding: 10px 0;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   ${media.lessThan('md')`
     margin: 0 15px;
@@ -119,4 +125,8 @@ export const EmailLink = styled.a`
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
