@@ -27,7 +27,7 @@ const BlogPage = () => (
         <PostPreview>
           <PostImage />
           <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Another One of Those Nonsensical Titles</PostTitle>
+          <PostTitle to="/">Another One of Those Nonsensical Titles</PostTitle>
           <PostContent>
             Well, here I am. Front and center stage, finally. For the last, well
             let’s say, ten months, I have been telling myself, “Shelb, you
@@ -38,7 +38,7 @@ const BlogPage = () => (
         <PostPreview>
           <PostImage />
           <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Another One of Those Nonsensical Titles</PostTitle>
+          <PostTitle to="/">Another One of Those Nonsensical Titles</PostTitle>
           <PostContent>
             Well, here I am. Front and center stage, finally. For the last, well
             let’s say, ten months, I have been telling myself, “Shelb, you
@@ -49,7 +49,7 @@ const BlogPage = () => (
         <PostPreview>
           <PostImage />
           <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Another One of Those Nonsensical Titles</PostTitle>
+          <PostTitle to="/">Another One of Those Nonsensical Titles</PostTitle>
           <PostContent>
             Well, here I am. Front and center stage, finally. For the last, well
             let’s say, ten months, I have been telling myself, “Shelb, you
@@ -59,18 +59,7 @@ const BlogPage = () => (
 
         <PostPreview>
           <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Look at Me. I Don't Have an Image!</PostTitle>
-          <PostContent>
-            Well, here I am. Front and center stage, finally. For the last, well
-            let’s say, ten months, I have been telling myself, “Shelb, you
-            really need to start writing more. More to the world in addition…
-          </PostContent>
-        </PostPreview>
-
-        <PostPreview>
-          <PostImage />
-          <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Another One of Those Nonsensical Titles</PostTitle>
+          <PostTitle to="/">Look at Me. I Don't Have an Image!</PostTitle>
           <PostContent>
             Well, here I am. Front and center stage, finally. For the last, well
             let’s say, ten months, I have been telling myself, “Shelb, you
@@ -81,7 +70,7 @@ const BlogPage = () => (
         <PostPreview>
           <PostImage />
           <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Another One of Those Nonsensical Titles</PostTitle>
+          <PostTitle to="/">Another One of Those Nonsensical Titles</PostTitle>
           <PostContent>
             Well, here I am. Front and center stage, finally. For the last, well
             let’s say, ten months, I have been telling myself, “Shelb, you
@@ -92,7 +81,18 @@ const BlogPage = () => (
         <PostPreview>
           <PostImage />
           <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Another One of Those Nonsensical Titles</PostTitle>
+          <PostTitle to="/">Another One of Those Nonsensical Titles</PostTitle>
+          <PostContent>
+            Well, here I am. Front and center stage, finally. For the last, well
+            let’s say, ten months, I have been telling myself, “Shelb, you
+            really need to start writing more. More to the world in addition…
+          </PostContent>
+        </PostPreview>
+
+        <PostPreview>
+          <PostImage />
+          <PostTimestamp>2 Jul 2018</PostTimestamp>
+          <PostTitle to="/">Another One of Those Nonsensical Titles</PostTitle>
           <PostContent>
             Well, here I am. Front and center stage, finally. For the last, well
             let’s say, ten months, I have been telling myself, “Shelb, you
@@ -102,7 +102,7 @@ const BlogPage = () => (
 
         <PostPreview>
           <PostTimestamp>2 Jul 2018</PostTimestamp>
-          <PostTitle>Again With The Imageless Post</PostTitle>
+          <PostTitle to="/">Again With The Imageless Post</PostTitle>
           <PostContent>
             Well, here I am. Front and center stage, finally. For the last, well
             let’s say, ten months, I have been telling myself, “Shelb, you

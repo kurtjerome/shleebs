@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { Link } from 'gatsby'
 import media from '../media'
 
 export const Container = styled.div`
@@ -145,12 +146,17 @@ export const PostTimestamp = styled.span`
   letter-spacing: 0.1em;
 `
 
-export const PostTitle = styled.strong`
+export const PostTitle = styled(Link)`
   font-family: ${props => props.theme.headerFont};
   font-weight: 700;
   font-size: 28px;
   color: ${props => props.theme.primaryColor};
   margin-bottom: 10px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 export const PostContent = styled.p`
