@@ -4,6 +4,8 @@ import media from '../media'
 
 export const Wrapper = styled.div`
   padding: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
 
   ${media.lessThan('md')`
     padding: 30px;
