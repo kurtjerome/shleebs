@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/Layouts/general-layout'
-import Coming from '../components/Coming'
 import {
   Wrapper,
   IntroParagraph,
@@ -20,7 +19,8 @@ const IndexPage = () => (
         <Strikethrough>Avon</Strikethrough>{' '}
         <Strikethrough>Philippines</Strikethrough>{' '}
         <Strikethrough>Rochester</Strikethrough> <Emphasize>Boston</Emphasize>.
-        Ben Howard, walking, peanut butter—these are few of my favorite things.
+        Ben Howard, walking, peanut butter—these are a few of my favorite
+        things.
       </IntroParagraph>
     </Wrapper>
   </Layout>
