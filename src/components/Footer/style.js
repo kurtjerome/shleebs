@@ -5,25 +5,61 @@ import media from '../../media'
 export const Wrapper = styled.footer`
   background-color: ${props => props.theme.footerBG};
   border-top: 1px solid ${props => props.theme.lightestColor};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 20px;
 `
 
-export const Quote = styled.p`
+export const InnerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 940px;
+  padding: 30px 20px;
+  margin: 0 auto;
+`
+
+export const BrandLink = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px;
+  text-decoration: none;
+
+  ${media.lessThan('md')`
+    margin: 10px;
+  `};
+`
+
+export const Logo = styled.img`
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: ${props => props.theme.lightestColor};
+  margin-right: 10px;
+`
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const Title = styled.strong`
   color: ${props => props.theme.primaryColor};
   font-family: ${props => props.theme.headerFont};
   font-weight: 700;
   font-size: 20px;
-  text-align: center;
+
+  ${media.lessThan('md')`
+    font-size: 16px;
+  `};
 `
 
-export const Rule = styled.div`
-  width: 30px;
-  height: 2px;
-  background-color: ${props => props.theme.lightColor};
-  margin: 40px 0;
+export const SubTitle = styled.span`
+  color: ${props => props.theme.lightColor};
+  font-family: ${props => props.theme.bodyFont};
+  font-weight: 500;
+  font-size: 12px;
+
+  ${media.lessThan('md')`
+    font-size: 11px;
+  `};
 `
 
 export const BottomNav = styled.nav`

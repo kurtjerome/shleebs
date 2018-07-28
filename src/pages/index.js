@@ -6,6 +6,7 @@ import {
   Emphasize,
   Strikethrough
 } from '../page-styles/index.style'
+
 require('typeface-butler')
 require('typeface-montserrat')
 

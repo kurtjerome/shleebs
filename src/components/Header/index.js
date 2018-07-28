@@ -42,7 +42,7 @@ const Header = ({ site }) => (
 export default () => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery2 {
+      query HeaderTitleQuery {
         site {
           siteMetadata {
             title
