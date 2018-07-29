@@ -6,16 +6,19 @@ import {
   BottomNav,
   NavLink,
   PersonalLinks,
-  LinkHeading,
   SocialMediaLink,
   EmailLink,
-  LinkColumn,
   SocialMediaLinks,
   BrandLink,
   Logo,
   TitleWrapper,
   Title,
-  SubTitle
+  SubTitle,
+  NavEmail,
+  EmailMe,
+  EmailMeSpan,
+  FooterNotes,
+  NoteLinks
 } from './style'
 
 const headerLogo = require('../../assets/images/header-logo.png')
@@ -30,36 +33,49 @@ const Footer = ({ site }) => (
           <SubTitle>This is Life. Life is This.</SubTitle>
         </TitleWrapper>
       </BrandLink>
-      <BottomNav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/blog">Blog</NavLink>
-        <NavLink to="/gallery">Gallery</NavLink>
-        <NavLink to="/mixtapes">Mixtapes</NavLink>
-      </BottomNav>
-      <PersonalLinks>
-        <LinkColumn>
-          <LinkHeading>Be my friend</LinkHeading>
-          <SocialMediaLinks>
-            <SocialMediaLink
-              target="_blank"
-              href="https://www.facebook.com/shelby.lisieski"
-            />
-            <SocialMediaLink
-              target="_blank"
-              href="https://www.instagram.com/shelbysagelisieski/"
-            />
-            <SocialMediaLink
-              target="_blank"
-              href="https://twitter.com/slisieski"
-            />
-          </SocialMediaLinks>
-        </LinkColumn>
-        <LinkColumn>
-          <LinkHeading>Email me</LinkHeading>
+      <NavEmail>
+        <BottomNav>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/gallery">Gallery</NavLink>
+          <NavLink to="/mixtapes">Mixtapes</NavLink>
+        </BottomNav>
+        <EmailMe>
+          <EmailMeSpan>Email me at</EmailMeSpan>{' '}
           <EmailLink href="mailto:shelbylisieski@gmail.com">
             shelbylisieski@gmail.com
           </EmailLink>
-        </LinkColumn>
+        </EmailMe>
+      </NavEmail>
+      <PersonalLinks>
+        <SocialMediaLinks>
+          <SocialMediaLink
+            target="_blank"
+            href="https://www.facebook.com/shelby.lisieski"
+          />
+          <SocialMediaLink
+            target="_blank"
+            href="https://www.instagram.com/shelbysagelisieski/"
+          />
+          <SocialMediaLink
+            target="_blank"
+            href="https://twitter.com/slisieski"
+          />
+        </SocialMediaLinks>
+        <FooterNotes>
+          Made in the Philippines with so much{' '}
+          <span role="img" aria-label="Poop">
+            💩
+          </span>.<br />
+          Powered by{' '}
+          <NoteLinks href="https://www.gatsbyjs.com/" title="Gatsby">
+            Gatsby
+          </NoteLinks>
+          {' and '}
+          <NoteLinks href="https://www.netlify.com/" title="Netlify">
+            Netlify
+          </NoteLinks>.
+        </FooterNotes>
       </PersonalLinks>
     </InnerWrapper>
   </Wrapper>

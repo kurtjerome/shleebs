@@ -13,17 +13,23 @@ export const InnerWrapper = styled.div`
   width: 940px;
   padding: 30px 20px;
   margin: 0 auto;
+
+  ${media.lessThan('lg')`
+    width: unset;
+  `};
 `
 
 export const BrandLink = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-self: flex-start;
   margin: 15px;
   text-decoration: none;
 
   ${media.lessThan('md')`
     margin: 10px;
+    align-self: center;
   `};
 `
 
@@ -62,9 +68,24 @@ export const SubTitle = styled.span`
   `};
 `
 
+export const NavEmail = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid ${props => props.theme.lightestColor};
+  padding: 10px 0;
+
+  ${media.lessThan('md')`
+    flex-direction: column;
+  `};
+`
+
 export const BottomNav = styled.nav`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
 export const NavLink = styled(Link)`
@@ -93,52 +114,57 @@ export const NavLink = styled(Link)`
   `};
 `
 
-export const PersonalLinks = styled.section`
-  min-width: 620px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 30px;
-
-  ${media.lessThan('md')`
-    min-width: 420px;
-    align-items: flex-start;
-    justify-content: space-evenly;
-  `};
-
-  ${media.lessThan('sm')`
-    min-width: unset;
-    flex-direction: column;
-  `};
-`
-
-export const LinkColumn = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  ${media.lessThan('md')`
-    flex-direction: column;
-    align-items: flex-start;
-  `};
-
-  ${media.lessThan('sm')`
-    margin-bottom: 15px;
-  `};
-`
-
-export const LinkHeading = styled.h6`
+export const EmailMe = styled.p`
   color: ${props => props.theme.lightColor};
   font-family: ${props => props.theme.bodyFont};
   font-weight: 500;
   font-size: 12px;
-  text-transform: uppercase;
-  margin: 0 15px 0 0;
+`
+
+export const EmailMeSpan = styled.span``
+
+export const EmailLink = styled.a`
+  color: ${props => props.theme.primaryColor};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+export const PersonalLinks = styled.section`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
 
   ${media.lessThan('md')`
-    margin-bottom: 10px;
+    flex-direction: column;
   `};
+`
+
+export const FooterNotes = styled.p`
+  color: ${props => props.theme.lightColor};
+  font-family: ${props => props.theme.bodyFont};
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.35em;
+
+  ${media.lessThan('md')`
+    text-align: center;
+  `};
+`
+
+export const NoteLinks = styled.a.attrs({
+  target: '_blank'
+})`
+  color: ${props => props.theme.primaryColor};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 export const SocialMediaLinks = styled.div`
@@ -153,16 +179,4 @@ export const SocialMediaLink = styled.a`
   border-radius: 50%;
   margin-right: 10px;
   background-color: ${props => props.theme.lightestColor};
-`
-
-export const EmailLink = styled.a`
-  color: ${props => props.theme.primaryColor};
-  font-family: ${props => props.theme.bodyFont};
-  font-weight: 500;
-  font-size: 14px;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `
