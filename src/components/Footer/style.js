@@ -124,6 +124,7 @@ export const EmailMe = styled.p`
   font-family: ${props => props.theme.bodyFont};
   font-weight: 500;
   font-size: 12px;
+  text-align: center;
 `
 
 export const EmailMeSpan = styled.span``
@@ -142,7 +143,7 @@ export const PersonalLinks = styled.section`
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 15px;
 
   ${media.lessThan('md')`
     flex-direction: column;
@@ -176,12 +177,17 @@ export const SocialMediaLinks = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: -5px;
+
+  ${media.lessThan('md')`
+    margin-right: 0;
+  `};
 `
 
 export const SocialMediaLink = styled.a`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin: 0 5px;
   background-color: ${props => props.theme.lightestColor};
 `
