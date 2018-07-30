@@ -24,7 +24,7 @@ export const BrandLink = styled(Link)`
   flex-direction: row;
   align-items: center;
   align-self: flex-start;
-  margin: 15px;
+  margin: 15px 0;
   text-decoration: none;
 
   ${media.lessThan('md')`
@@ -86,6 +86,15 @@ export const BottomNav = styled.nav`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: -20px;
+
+  ${media.lessThan('md')`
+    margin-left: -15px;
+  `};
+
+  ${media.lessThan('sm')`
+    margin-left: -10px;
+  `};
 `
 
 export const NavLink = styled(Link)`
