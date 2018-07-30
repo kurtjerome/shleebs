@@ -89,11 +89,7 @@ export const BottomNav = styled.nav`
   margin-left: -20px;
 
   ${media.lessThan('md')`
-    margin-left: -15px;
-  `};
-
-  ${media.lessThan('sm')`
-    margin-left: -10px;
+    margin-left: 0;
   `};
 `
 
