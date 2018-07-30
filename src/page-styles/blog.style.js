@@ -139,8 +139,8 @@ export const PostImage = styled.div`
 export const PostTimestamp = styled.span`
   color: ${props => props.theme.lightColor};
   font-family: ${props => props.theme.bodyFont};
-  font-weight: 300;
-  font-size: 11px;
+  font-weight: 500;
+  font-size: 10px;
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 0.1em;
@@ -162,7 +162,7 @@ export const PostTitle = styled(Link)`
 export const PostContent = styled.p`
   color: ${props => props.theme.bodyColor};
   font-family: ${props => props.theme.bodyFont};
-  font-weight: 200;
+  font-weight: 300;
   font-size: 14px;
   line-height: 1.5em;
   margin: 0 0 10px;
