@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import media from '../../media'
 
+const facebookIcon = require('../../assets/images/facebook.svg')
+const instagramIcon = require('../../assets/images/instagram.svg')
+const twitterIcon = require('../../assets/images/twitter.svg')
+
 export const Wrapper = styled.footer`
   background-color: ${props => props.theme.footerBG};
   border-top: 1px solid ${props => props.theme.lightestColor};
@@ -177,7 +181,7 @@ export const SocialMediaLinks = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: -5px;
+  margin-right: -2px;
 
   ${media.lessThan('md')`
     margin-right: 0;
@@ -187,7 +191,27 @@ export const SocialMediaLinks = styled.div`
 export const SocialMediaLink = styled.a`
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  margin: 0 5px;
-  background-color: ${props => props.theme.lightestColor};
+  border-radius: 4px;
+  margin: 0 2px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-color: ${props => props.theme.lightestColor};
+  }
+`
+
+export const FacebookLink = SocialMediaLink.extend`
+  background-image: url(${facebookIcon});
+`
+
+export const InstagramLink = SocialMediaLink.extend`
+  background-image: url(${instagramIcon});
+`
+
+export const TwitterLink = SocialMediaLink.extend`
+  background-image: url(${twitterIcon});
 `

@@ -6,7 +6,6 @@ import {
   BottomNav,
   NavLink,
   PersonalLinks,
-  SocialMediaLink,
   EmailLink,
   SocialMediaLinks,
   BrandLink,
@@ -18,7 +17,10 @@ import {
   EmailMe,
   EmailMeSpan,
   FooterNotes,
-  NoteLinks
+  NoteLinks,
+  FacebookLink,
+  InstagramLink,
+  TwitterLink
 } from './style'
 
 const headerLogo = require('../../assets/images/header-logo.png')
@@ -49,18 +51,21 @@ const Footer = ({ site }) => (
       </NavEmail>
       <PersonalLinks>
         <SocialMediaLinks>
-          <SocialMediaLink
+          <FacebookLink
             target="_blank"
             href="https://www.facebook.com/shelby.lisieski"
-          />
-          <SocialMediaLink
+          >
+            Facebook
+          </FacebookLink>
+          <InstagramLink
             target="_blank"
             href="https://www.instagram.com/shelbysagelisieski/"
-          />
-          <SocialMediaLink
-            target="_blank"
-            href="https://twitter.com/slisieski"
-          />
+          >
+            Instagram
+          </InstagramLink>
+          <TwitterLink target="_blank" href="https://twitter.com/slisieski">
+            Twitter
+          </TwitterLink>
         </SocialMediaLinks>
         <FooterNotes>
           Made in the Philippines with so much{' '}
