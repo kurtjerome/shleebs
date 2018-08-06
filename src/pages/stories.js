@@ -12,14 +12,14 @@ import {
   PostTimestamp,
   PostTitle,
   PostContent
-} from '../page-styles/blog.style'
+} from '../page-styles/stories.style'
 
-const BlogPage = () => (
+const StoriesPage = () => (
   <Layout>
     <Container>
       <Masonry disableImagesLoaded={true} options={{ transitionDuration: 0 }}>
         <TitleWrapper>
-          <Title>Blog</Title>
+          <Title>Stories</Title>
           <SubTitle>
             A fun subtitle. Probably throw some clever pun in there.
           </SubTitle>
@@ -114,4 +114,4 @@ const BlogPage = () => (
   </Layout>
 )
 
-export default BlogPage
+export default StoriesPage
