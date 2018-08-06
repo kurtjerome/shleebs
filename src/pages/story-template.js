@@ -1,4 +1,5 @@
 import React from 'react'
+import { DiscussionEmbed } from 'disqus-react'
 
 import Layout from '../components/Layouts/general-layout'
 import {
@@ -22,7 +23,7 @@ const StoryTemplatePage = () => (
         />
         <StoryTitleWrapper>
           <StoryTimestamp>6 Aug 2018</StoryTimestamp>
-          <StoryTitle>Day One</StoryTitle>
+          <StoryTitle>This is Some Title, Right?</StoryTitle>
         </StoryTitleWrapper>
       </StoryHeader>
       <StoryBodyWrapper>
@@ -194,6 +195,13 @@ const StoryTemplatePage = () => (
         </StoryBody>
         <ShareWidget />
       </StoryBodyWrapper>
+      <DiscussionEmbed
+        shortname="kurtjerome"
+        config={{
+          identifier: 'Day One',
+          title: 'Day One'
+        }}
+      />
     </Wrapper>
   </Layout>
 )
