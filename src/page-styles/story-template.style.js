@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-// import { Link } from 'gatsby'
+import {
+  FacebookIcon as ShareFacebookIcon,
+  TwitterIcon as ShareTwitterIcon
+} from 'react-share'
 import media from '../media'
 
 export const Wrapper = styled.article`
@@ -78,7 +81,7 @@ export const StoryBodyWrapper = styled.div`
   flex-direction: row-reverse;
   justify-content: space-between;
   max-width: 780px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
 
   ${media.lessThan('lg')`
     flex-direction: column;
@@ -87,11 +90,50 @@ export const StoryBodyWrapper = styled.div`
   `};
 `
 
-export const ShareWidget = styled.div``
+export const ShareWrapper = styled.div`
+  padding: 0 11.5px;
+`
+
+export const ShareWidget = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 30px;
+  padding-top: 15px;
+
+  ${media.lessThan('lg')`
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+  `};
+`
+
+export const FacebookIcon = styled(ShareFacebookIcon).attrs({
+  size: 32,
+  iconBgStyle: { fill: 'transparent' },
+  logoFillColor: props => props.theme.primaryColor
+})`
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${props => props.theme.lightestColor};
+  }
+`
+
+export const TwitterIcon = styled(ShareTwitterIcon).attrs({
+  size: 32,
+  iconBgStyle: { fill: 'transparent' },
+  logoFillColor: props => props.theme.primaryColor
+})`
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${props => props.theme.lightestColor};
+  }
+`
 
 export const StoryBody = styled.div`
   max-width: 610px;
-  margin-bottom: 100px;
 
   ${media.lessThan('lg')`
     margin: 0 auto 100px;

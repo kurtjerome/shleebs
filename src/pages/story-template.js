@@ -1,5 +1,6 @@
 import React from 'react'
 import { DiscussionEmbed } from 'disqus-react'
+import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
 import Layout from '../components/Layouts/general-layout'
 import {
@@ -11,7 +12,10 @@ import {
   StoryTitle,
   StoryBodyWrapper,
   ShareWidget,
-  StoryBody
+  StoryBody,
+  FacebookIcon,
+  TwitterIcon,
+  ShareWrapper
 } from '../page-styles/story-template.style'
 
 const StoryTemplatePage = () => (
@@ -193,7 +197,19 @@ const StoryTemplatePage = () => (
           </p>
           <p>July 27th—New Yorker by day, Masshole by night.</p>
         </StoryBody>
-        <ShareWidget />
+        <ShareWrapper>
+          <ShareWidget>
+            <FacebookShareButton
+              url="https://shleebs.netlify.com/stories/"
+              className="fb-share"
+            >
+              <FacebookIcon />
+            </FacebookShareButton>
+            <TwitterShareButton url="https://shleebs.netlify.com/stories/">
+              <TwitterIcon size={32} />
+            </TwitterShareButton>
+          </ShareWidget>
+        </ShareWrapper>
       </StoryBodyWrapper>
       <DiscussionEmbed
         shortname="kurtjerome"
