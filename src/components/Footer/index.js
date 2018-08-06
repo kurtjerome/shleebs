@@ -38,7 +38,7 @@ const Footer = ({ site }) => (
       <NavEmail>
         <BottomNav>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/stories">Stories</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
           <NavLink to="/mixtapes">Mixtapes</NavLink>
         </BottomNav>

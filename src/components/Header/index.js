@@ -26,8 +26,8 @@ const Header = ({ site }) => (
       <NavLink exact activeClassName="active" to="/">
         Home
       </NavLink>
-      <NavLink exact activeClassName="active" to="/blog">
-        Blog
+      <NavLink exact activeClassName="active" to="/stories">
+        Stories
       </NavLink>
       <NavLink exact activeClassName="active" to="/gallery">
         Gallery
