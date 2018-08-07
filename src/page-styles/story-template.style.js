@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   FacebookIcon as ShareFacebookIcon,
   TwitterIcon as ShareTwitterIcon
@@ -105,31 +105,43 @@ export const ShareWidget = styled.div`
     flex-direction: row;
     justify-content: center;
     position: static;
+    padding-top: 0;
   `};
+
+  .SocialMediaShareButton {
+    margin-bottom: 10px;
+
+    ${media.lessThan('lg')`
+      margin: 0 5px;
+    `};
+  }
+`
+
+const ShareIconBaseStyles = css`
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid ${props => props.theme.lightestColor};
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: ${props => props.theme.primaryColor};
+  }
 `
 
 export const FacebookIcon = styled(ShareFacebookIcon).attrs({
-  size: 32,
+  size: 40,
   iconBgStyle: { fill: 'transparent' },
   logoFillColor: props => props.theme.primaryColor
 })`
-  cursor: pointer;
-
-  &:hover {
-    background-color: ${props => props.theme.lightestColor};
-  }
+  ${ShareIconBaseStyles};
 `
 
 export const TwitterIcon = styled(ShareTwitterIcon).attrs({
-  size: 32,
+  size: 40,
   iconBgStyle: { fill: 'transparent' },
   logoFillColor: props => props.theme.primaryColor
 })`
-  cursor: pointer;
-
-  &:hover {
-    background-color: ${props => props.theme.lightestColor};
-  }
+  ${ShareIconBaseStyles};
 `
 
 export const StoryBody = styled.div`

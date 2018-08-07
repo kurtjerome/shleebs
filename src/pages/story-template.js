@@ -188,7 +188,7 @@ const StoryTemplatePage = () => (
             I knew getting used to sleeping on the floor would pay off!
           </p>
           <p>
-            “Laying like this reminds me of sleeping I’m calling among island in
+            “Laying like this reminds me of sleeping in Kalanggaman island in
             the Philippines the breeze was just right and I slept like a baby in
             that hammock. Though I’m not on the beach, this would paneling
             underneath me is just as comfy.” because I know no matter how hard
@@ -199,14 +199,11 @@ const StoryTemplatePage = () => (
         </StoryBody>
         <ShareWrapper>
           <ShareWidget>
-            <FacebookShareButton
-              url="https://shleebs.netlify.com/stories/"
-              className="fb-share"
-            >
+            <FacebookShareButton url="https://shleebs.netlify.com/stories/">
               <FacebookIcon />
             </FacebookShareButton>
             <TwitterShareButton url="https://shleebs.netlify.com/stories/">
-              <TwitterIcon size={32} />
+              <TwitterIcon />
             </TwitterShareButton>
           </ShareWidget>
         </ShareWrapper>
