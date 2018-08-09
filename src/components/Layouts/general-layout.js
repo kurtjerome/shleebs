@@ -14,7 +14,7 @@ export default ({ children }) => (
       meta={[
         {
           name: 'description',
-          content: 'The Sage of Discovery. This is Life. Life is this.'
+          content: 'This is Life. Life is this.'
         },
         { name: 'keywords', content: 'shelby, sage, lisieski, life' }
       ]}
